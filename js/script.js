@@ -13,13 +13,13 @@ var combos = [
 	{key: 87, file: "DEDEDEDE2", desc: "DE DE DE DE DE DE", alt_file: "succhi", alt_desc: "TU SUCCHI CAZZI?"}, //W
 	{key: 69, file: "ehm", desc: "EHMHMHMH", alt_file: "soffi", alt_desc: "CI SOFFI DENTRO?"}, //E
 	{key: 82, file: "bicoz", desc: "BICOZ"}, //R
-	{key: 88, file: "GENIUS", desc: "GENIUS!"}, //X
+	{key: 88, file: "GENIUS", desc: "GENIUS!", alt_file: "eunuco"}, //X
 	{key: 65, file: "eighty", desc: "EIGHTY UUUUH", alt_file: "fox"}, //A
 	{key: 83, file: "mistraccio", desc: "FEEHEHEH MISTRACCIOH", alt_file: "nein"}, //S
-	{key: 68, file: "lanch", desc: "LANCHHEEH"}, //D
+	{key: 68, file: "lanch", desc: "LANCHHEEH", alt_file: "smolli"}, //D
 	{key: 79, file:"speaking", desc: "TO SPEAKING ABBOUZHE"}, //O
 	{key: 90, file: "mader", desc: "MAI MADER", alt_file: "mona"}, //Z
-	{key: 67, file: "CRAI", desc: "CRAI"}, //C
+	{key: 67, file: "CRAI", desc: "CRAI", alt_file: "defojance"}, //C
 	{key: 85, file: "destroyed", desc: "DESTROYD"}, //U
 	{key: 73, file: "time", desc: "TIME TO TO TO"}, //I
 	{key: 66, file: "commerciala", desc: "DEIDEA WITAUT MARKET COMMERCIAL-H"}, //B
@@ -30,7 +30,7 @@ var combos = [
 	{key: 77, file: "brevetto", desc:"COMESIDICE BREVETTO"}, //M
 	{key: 78, file: "walker", desc:"IWWOZ E WOLKER"}, //N
 	{key: 86, file: "thankyou"},
-	{key: 71, file: bgmusic[currentbg].file, desc:String.fromCharCode(9835)}
+	{key: 71, file: bgmusic[currentbg].file, desc:String.fromCharCode(9835),}
 ];
 
 $(document).ready(function(){
@@ -106,8 +106,11 @@ $(".key").click(function(){
 		default:
 			keycode = letter.charCodeAt();
 			break;
-	}
-	if(cont) process(keycode);
+	}    
+	if(cont) {
+           console.log(keycode);
+        process(keycode);
+    }
 });
 
 function altKeys(){
